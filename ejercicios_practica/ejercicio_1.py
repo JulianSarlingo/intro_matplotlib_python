@@ -10,6 +10,8 @@
 # Ejercicios de matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
+from os import system
+system('cls')
 
 
 if __name__ == '__main__':
@@ -27,6 +29,12 @@ if __name__ == '__main__':
     for i in x:
         y.append(i**2)
 
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    ax.plot(x, y, c='darkblue', label='funcion cuadratica')
+    ax.grid()
+    ax.legend()
+
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
 
@@ -34,5 +42,5 @@ if __name__ == '__main__':
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")

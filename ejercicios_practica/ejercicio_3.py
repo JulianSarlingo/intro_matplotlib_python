@@ -10,6 +10,8 @@
 # Ejercicios de matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
+from os import system
+system('cls')
 
 
 if __name__ == '__main__':
@@ -25,6 +27,13 @@ if __name__ == '__main__':
     # Función y = tanh(x) --> tangente hiperbólica
     y = np.tanh(x)
 
+    fig = plt.figure()
+    fig.suptitle('Ejercicio 3 de practica')
+    ax = fig.add_subplot()
+
+    ax.scatter(x, y, c='green', label='funcion tan(x)', marker='.')
+    ax.legend()
+    ax.grid()
     # Alumno: Graficar la función utilizando "scatter"
     # utilizando "x" e "y" ya disponible
 
@@ -33,5 +42,5 @@ if __name__ == '__main__':
     # Elegir un marker a elección
 
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")

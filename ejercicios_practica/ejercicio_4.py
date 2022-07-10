@@ -10,6 +10,8 @@
 # Ejercicios de matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
+from os import system
+system('cls')
 
 
 if __name__ == '__main__':
@@ -44,6 +46,26 @@ if __name__ == '__main__':
     # Utilizar add_subplot para lograr este efecto
     # de "2 filas" "2 columna" de gráficos
 
+    fig = plt.figure()
+    fig.suptitle('Ejercicio 4 de practica')
+    ax1 = fig.add_subplot(2,2,1)
+    ax2 = fig.add_subplot(2,2,2)
+    ax3 = fig.add_subplot(2,2,3)
+    ax4 = fig.add_subplot(2,2,4)
+
+    ax1.plot(x, y1, c='darkred', label='funcion x^2')
+    ax2.plot(x, y2, c='darkblue', label='funcion x^3')
+    ax3.plot(x, y3, c='darkgreen', label='funcion x^4')
+    ax4.plot(x, y4, c='cyan', label='funcion √x')
+    ax1.legend()
+    ax1.grid(ls = 'dashed')
+    ax2.legend()
+    ax2.grid()
+    ax3.legend()
+    ax3.grid()
+    ax4.legend()
+    ax4.grid()
+
     # Se debe colocar en la leyenda la función que representa
     # cada gráfico
 
@@ -53,5 +75,5 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")
